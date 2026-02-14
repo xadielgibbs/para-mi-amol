@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Ti ❤️</title>
+<style>
+body{
+    margin:0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+    color:#fff;
+}
+
+.book{
+    background: rgba(0,0,0,0.4);
+    padding:40px;
+    border-radius:20px;
+    width:80%;
+    max-width:600px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#fff;
+    color:#ff4e50;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff4e50;
+    color:white;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="book">
+    <div id="content">
+        <h2>Jane, mi chiquita linda, amol de mi vida 🥹 ❤️</h2>
+        <p>Hay algo muy especial que quiero decirte...</p>
+    </div>
+    <button id="nextBtn" onclick="nextPage()">Siguiente ➜</button>
+</div>
+
+<script>
+
+let page = 1;
+
+function nextPage(){
+    page++;
+
+    const content = document.getElementById("content");
+    const nextBtn = document.getElementById("nextBtn");
+
+    if(page === 2){
+        content.innerHTML = `
+        <h2>Desde que llegaste...</h2>
+        <h2>Recuerdas esos dias amol 🥹...</h2>
+        <p>
+        La primera vez que tuvimos contacto fue en el juego.  
+        Te mandé ese desafío y tú me dijiste que eras muy débil…  
+        pero yo insistí, porque algo me decía que aceptaras.
+        </p>
+        <p>
+        Tuvimos esa batalla… y ahí fue cuando empezó todo.  
+        Vi cosas que podías mejorar y quise ayudarte.  
+        Te pasé listas, consejos, mejoras…  
+        y sin darme cuenta, mientras el juego avanzaba, nosotros también lo hacíamos.
+        </p>
+        <p>
+        Lo que empezó como un simple desafío terminó siendo el inicio  
+        de la historia más bonita que estoy viviendo contigo.
+        </p>
+        `;
+    }
+
+    else if(page === 3){
+        content.innerHTML = `
+        <h2>Todo lo que siento por ti...</h2>
+        <p>
+        No te imaginas la admiración, el respeto, el cariño y el amor tan grande que siento por ti.
+        </p>
+        <p>
+        Admiro tu forma de ser, tu corazón, tu esfuerzo, tu manera de enfrentar las cosas.  
+        Respeto la mujer que eres y la persona en la que te estás convirtiendo.
+        </p>
+        <p>
+        Te tengo un cariño que crece cada día…  
+        y un amor que nació sin que me diera cuenta, pero que hoy es imposible de negar.
+        </p>
+        <p>
+        Contigo no solo me siento feliz…  
+        me siento orgulloso de lo que estamos construyendo.
+        </p>
+        `;
+    }
+
+    else if(page === 4){
+        content.innerHTML = `
+        <h2>Lo que quiero construir contigo❤️🥹🫂</h2>
+        <p>
+        No quiero que esto sea algo pasajero.  
+        Quiero cuidarte, protegerte y estar contigo en cada etapa de tu vida.
+        </p>
+        <p>
+        Quiero ayudarte a superar tus miedos, tus malestares, tus días difíciles.  
+        Ser tu apoyo, tu fuerza cuando la necesites y tu calma cuando el mundo se sienta pesado.
+        </p>
+        <p>
+        Sueño con el día en que podamos vivir juntos…  
+        tener nuestro hogar, nuestro rancho lleno de animalitos,  
+        y construir esa familia grande y hermosa que tanto deseas.
+        </p>
+        <p>
+        Quiero una vida contigo, mi princesa…  
+        una vida real, estable y llena de amor...  
+        Eres la persona que se convirtió en mi paz, mi alegría y el sentimiento más bonito que tengo ❤️🫂🥹
+        </p>
+        `;
+    }
+
+    else if(page === 5){
+        content.innerHTML = `
+        <h2>Y ahora quiero preguntarte algo...</h2>
+        <p>❤️</p>
+        `;
+    }
+
+    else if(page === 6){
+        content.innerHTML = `
+        <h1>¿Quieres ser mi novia? 💖</h1>
+        <p>Prometo cuidarte y hacerte feliz cada día ❤️</p>
+        <button onclick="respuestaSi()">Sí 💕</button>
+        `;
+        nextBtn.style.display = "none";
+    }
+}
+
+function respuestaSi(){
+    alert("Sabía que dirías que sí 😍 Ahora oficialmente eres mi novia ❤️");
+}
+
+</script>
+
+</body>
+</html>
